@@ -1,0 +1,232 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Courier New', sans-serif;
+  background-color: #eafaf1; /* Light greenish background */
+  color: #2c3e50; /* Dark slate text for contrast */
+}
+
+/* Layout container */
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar for the summary table */
+.sidebar {
+  flex: 1;
+  background-color: #d4edda; /* Soft green background */
+  padding: 20px;
+  border-right: 3px solid #6fcf97; /* Vibrant green border */
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  color: #27ae60; /* Forest green heading */
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.sidebar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sidebar th {
+  background-color: #6fcf97; /* Vibrant green */
+  color: white;
+  padding: 10px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.sidebar td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #b8e1c6; /* Soft greenish border */
+}
+
+.sidebar tr:hover {
+  background-color: #b8e1c6; /* Highlighted row color */
+}
+
+/* Main content area */
+.main-content {
+  flex: 3;
+  background-color: #f6fdfd; /* Soft blue background */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  color: #3498db; /* Bright blue */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-content h2 {
+  color: #f1c40f; /* Vibrant yellow for emphasis */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.main-content select {
+  padding: 10px;
+  border: 2px solid #6fcf97; /* Green border */
+  border-radius: 5px;
+  background-color: #eafaf1; /* Light green */
+  color: #2c3e50; /* Dark slate text */
+  font-size: 1em;
+}
+
+.main-content select:hover {
+  background-color: #b8e1c6; /* Light green hover */
+}
+
+.main-content .slider {
+  margin: 20px 0;
+}
+
+.main-content .slider .thumb {
+  background-color: #27ae60; /* Green thumb */
+  border: 2px solid #f1c40f; /* Yellow border */
+}
+
+.main-content .slider .track {
+  background-color: #3498db; /* Blue track */
+}
+
+/* Plotly container */
+.main-content .plotly-graph-div {
+  border: 2px solid #74e3ff; /* Green border for graph */
+  border-radius: 0px;
+}
+
+/* Buttons (if any) */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1c40f; /* Bright yellow */
+  color: #2c3e50; /* Dark slate */
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffeb3b; /* Lighter yellow on hover */
+}
+
+/* Make the app responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 3px solid #6fcf97;
+  }
+}
+
+h2.headertekst {
+  text-align: center;
+}
+
+
+/* Right sidebar for point details */
+.details-sidebar {
+  flex: 1;
+  background-color: #f6fdfd; /* Light blue background */
+  padding: 20px;
+  border-left: 3px solid #6fcf97; /* Green border */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.details-sidebar h2 {
+  color: #3498db; /* Blue heading */
+  font-size: 1.5em;
+}
+
+.details-sidebar p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.details-sidebar div {
+  margin-top: 10px;
+}
+
+/* Bottom-right section for Top ROI Customers */
+.top-roi {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-roi h2 {
+  color: #27ae60; /* Green heading */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.top-roi ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-roi li {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #eafaf1;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.top-roi li:hover {
+  background-color: #6fcf97; /* Highlighted green */
+  color: white;
+}
+
+
+
+
+/* Flex container for Group By and Clustering Sensitivity */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Group By dropdown styling */
+.group-by {
+  flex: 1; /* Adjust width */
+  margin-right: 20px;
+}
+
+.group-by select {
+  padding: 10px;
+  border: 2px solid #6fcf97;
+  border-radius: 5px;
+  background-color: #eafaf1;
+  color: #2c3e50;
+  font-size: 1em;
+}
+
+/* Clustering Sensitivity Slider styling */
+.sensitivity-slider {
+  flex: 2; /* Adjust width */
+}
